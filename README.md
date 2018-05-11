@@ -27,7 +27,15 @@ $ go build && go install
 
 ### Configure
 
-Rat is configured through a file `ratrc` in your home config directory ([`$XDG_CONFIG_HOME/rat`](https://specifications.freedesktop.org/basedir-spec/latest), `~/.config/rat` by default).
+Rat is configured through a `ratrc` file.
+
+Since commit [73e4b90](https://github.com/ericfreese/rat/commit/73e4b90465e087e8b30fa6fc941f4927aac1707b), it's default path is set to: `~/.config/rat/ratrc`.
+
+Thus do not use ~/.ratrc as seen in the `demo.gif` above.
+
+`~/.config` directory may be overriden with the $XDG_CONFIG_HOME env var.
+
+See [this page](https://specifications.freedesktop.org/basedir-spec/latest) for more info about the XDG Base Directory Specification.
 
 Rat pagers can be opened in one or more "modes". A mode is a configuration of "annotators" and "key bindings":
 
